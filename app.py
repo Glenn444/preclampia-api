@@ -13,6 +13,7 @@ import numpy as np
 import pickle
 import pandas as pd
 import warnings
+from fastapi.middleware.cors import CORSMiddleware
 # 2. Create the app object
 app = FastAPI()
 pickle_in = open("classifier.pkl","rb")
@@ -20,6 +21,16 @@ classifier=pickle.load(pickle_in)
 
 warnings.filterwarnings("ignore", message="X does not have valid feature names", category=UserWarning)
 # 3. Index route, opens automatically on http://127.0.0.1:8000
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=*,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 @app.get('/')
 def index():
     return {'message': 'Hello, World'}
