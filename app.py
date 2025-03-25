@@ -22,7 +22,7 @@ classifier=pickle.load(pickle_in)
 warnings.filterwarnings("ignore", message="X does not have valid feature names", category=UserWarning)
 # 3. Index route, opens automatically on http://127.0.0.1:8000
 
-origins = [*]
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
