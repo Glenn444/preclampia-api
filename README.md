@@ -1,7 +1,7 @@
 # This is a machine Learning model that predicts preclampia among pregnat women
 ## Required Paramaters include:
 ```
-Age: int
+  Age: int
 	Pre_pregnancy_Weight: float
 	Parity: int
 	Annual_Income: int
