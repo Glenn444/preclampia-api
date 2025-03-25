@@ -1,4 +1,4 @@
-# This is a machine Learning model that predicts preclampia among pregnat women
+# This is a machine Learning model that predicts preclampia among pregnant women
 ## Required Paramaters include:
 ```
   Age: int
