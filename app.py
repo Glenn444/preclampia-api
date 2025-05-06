@@ -65,9 +65,9 @@ def predict_preclampsia(data:PreclampsiaBase):
     history_diabetes,history_preeclampsia,proteinuria_levels,month,systolic_bp,
     diastolic_bp]])
     if(prediction[0] == 0):
-        prediction="You Don't have Preeclampia"
+        prediction="Low Risk of Preeclampsia"
     else:
-        prediction="You have Preeclampia"
+        prediction="High Risk of Preeclampsia"
     return {
         'prediction': prediction
     }
